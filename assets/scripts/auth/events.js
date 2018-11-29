@@ -1,7 +1,7 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields.js')
-const addNestedValue = require('../../../lib/add-nested-value.js')
+// const addNestedValue = require('../../../lib/add-nested-value.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
@@ -40,12 +40,21 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+// const onCreateDialog = event => {
+//   event.preventDefault()
+//   console.log('onCreateDialog ran.')
+//   api.createDialog()
+//     .then(ui.createDialogSuccess)
+//     .catch(ui.createDialogFailure)
+// }
+
 const addAuthHandlers = () => {
   $('#signed-in').hide()
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+//   $('#create-dialog').on('submit', onCreateDialog)
 }
 
 // NEED TO CREATE NEW FUNCTION FOR CREATING NEW AUTH HANDLERS
