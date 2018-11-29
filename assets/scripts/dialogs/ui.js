@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('../store.js')
+// const store = require('../store.js')
 
 const emptyMessage = () => {
   setTimeout(function () {
@@ -10,7 +10,6 @@ const emptyMessage = () => {
 
 const createDialogSuccess = data => {
   $('.message').text('created dial0g successfully')
-  store.user = {} // or = null
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
   console.log('createDialogSuccess ran. Data is:', data)

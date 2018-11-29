@@ -17,7 +17,7 @@ const store = require('../store.js')
 
 const createDialog = data => {
   return $.ajax({
-    url: config.apiUrl + '/create-dialog',
+    url: config.apiUrl + '/dialogs',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
