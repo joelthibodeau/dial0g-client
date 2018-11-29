@@ -33,6 +33,19 @@ const onUpdateDialog = event => {
     .catch(ui.updateDialogFailure)
 }
 
+const onDeleteDialog = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // const data = $('#delete-input').val()
+  // console.log('delete scheme')
+  console.log(data)
+  // take this data and send it to our server
+  // using an HTTP request (POST)
+  console.log('onDeleteDialog ran.')
+  api.deleteDialog(data)
+    .then(ui.deleteDialogSuccess) // if your request was succesful
+    .catch(ui.deleteDialogFailure) // if your request failed
+}
 // const onDeleteDialog = function (event) {
 //   console.log('got into onDeleteDialog...about to prevent default')
 //   event.preventDefault()
@@ -51,7 +64,7 @@ const onUpdateDialog = event => {
 const addDialogHandlers = () => {
   $('#create-dialog').on('submit', onCreateDialog)
   $('#update-dialog').on('submit', onUpdateDialog)
-  // $('#delete-dialog').on('submit', onDeleteDialog)
+  $('#delete-dialog').on('submit', onDeleteDialog)
 }
 
 // NEED TO CREATE NEW FUNCTION FOR CREATING NEW AUTH HANDLERS

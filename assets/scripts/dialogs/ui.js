@@ -40,17 +40,27 @@ const updateDialogFailure = error => {
   emptyMessage()
 }
 
-// const deleteDialogSuccess = function (response, dialogId) {
-//   // clear the results div, in case it had stuff in it
-//   $('.message').html('')
-//   // print results to index.html
-//   console.log(response)
-//   $('.message').append(`Dialog ${dialogId} was deleted successfully`)
+const deleteDialogSuccess = data => {
+  $('.message').text('delete dial0g successfully')
+  $('.message').attr('class', 'message')
+  $('.message').addClass('success')
+  console.error('deleteDialogSuccess ran.')
+  emptyMessage()
+}
+
+const deleteDialogFailure = error => {
+  $('.message').text('error on delete dial0g')
+  $('.message').attr('class', 'message')
+  $('.message').addClass('failure')
+  console.error('deleteDialogFailure ran. Error is :', error)
+  emptyMessage()
+}
 
 module.exports = {
   createDialogSuccess,
   createDialogFailure,
   updateDialogSuccess,
-  updateDialogFailure
-  // deleteDialogSuccess
+  updateDialogFailure,
+  deleteDialogSuccess,
+  deleteDialogFailure
 }

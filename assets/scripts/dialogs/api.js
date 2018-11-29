@@ -42,6 +42,21 @@ const updateDialog = data => {
   })
 }
 
+const deleteDialog = data => {
+  // get id out of data
+  const id = data.dialog.id
+  // delete id from data before sending it
+  delete data.dialog.id
+  return $.ajax({
+    url: config.apiUrl + `/dialogs/${id}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {}
+  })
+}
+
 // const deleteDialog = function (id) {
 //   return $.ajax({
 //     url: config.apiUrl + `/dialogs/${id}`,
@@ -59,6 +74,6 @@ const updateDialog = data => {
 
 module.exports = {
   createDialog,
-  updateDialog
-  // deleteDialog
+  updateDialog,
+  deleteDialog
 }
