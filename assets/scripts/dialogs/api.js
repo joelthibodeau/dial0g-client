@@ -26,6 +26,39 @@ const createDialog = data => {
   })
 }
 
+const updateDialog = data => {
+  // get id out of data
+  const id = data.dialog.id
+  // delete id from data before sending it
+  delete data.dialog.id
+
+  return $.ajax({
+    url: config.apiUrl + `/dialogs/${id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
+// const deleteDialog = function (id) {
+//   return $.ajax({
+//     url: config.apiUrl + `/dialogs/${id}`,
+//     method: 'DELETE'
+//   })
+// }
+
+// const updateOneBookFromApi = function (bookObject) {
+//   return $.ajax({
+//     url: baseUrl + `/books/${bookObject.book.id}`,
+//     method: 'PATCH',
+//     data: bookObject
+//   })
+// }
+
 module.exports = {
-  createDialog
+  createDialog,
+  updateDialog
+  // deleteDialog
 }
