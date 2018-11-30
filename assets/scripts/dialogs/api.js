@@ -57,14 +57,14 @@ const deleteDialog = data => {
   })
 }
 
-const getAllDialogs = function () {
-  // use AJAX to send request
-  const data = $.ajax({
+const getAllDialogs = () => {
+  return $.ajax({
     url: config.apiUrl + '/dialogs',
-    method: 'GET'
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
-  // return the AJAX object
-  return data
 }
 
 module.exports = {

@@ -46,25 +46,36 @@ const onDeleteDialog = event => {
     .then(ui.deleteDialogSuccess) // if your request was succesful
     .catch(ui.deleteDialogFailure) // if your request failed
 }
-// const onDeleteDialog = function (event) {
-//   console.log('got into onDeleteDialog...about to prevent default')
-//   event.preventDefault()
-//
-//   const input = getFormFields(event.target) // input = { book: { id: 100 } }
-//   console.log('my dialog id is ', input.dialog.id)
-//
-//   api.deleteDialog(input.dialog.id)
-//     .then(function (response) {
-//       ui.deleteDialogSuccess(response, input.dialog.id)
-//     })
-//     // .then(ui.handleDeleteSuccessResponse)
-//     .catch(ui.deleteDialogFailure)
-// }
 
+const onGetDialogs = event => {
+  event.preventDefault()
+  // console.log('onGetStats ran.')
+  api.getAllDialogs()
+    .then((result) => {
+      // console.log(result)
+      // code inspired by tic tac toe
+      // 1. create new div
+      // 2. add id to newly created div
+      // 3. add class to newly created div
+      // 4. make newly created div the child of #dialogs-info div
+      // 5. add dialogs result to the newly created div for specific game
+      for (let i = 0; i < result.dialogs.length; i++) {
+        const elementDialogEntry = document.createElement('div') // 1.
+        elementDialogEntry.setAttribute('id', 'dialog-entry-' + i) // 2.
+        // elementDialogEntry.setAttribute('class', 'dialog-entry-element') // 3.
+        document.getElementById('dialogs-info').appendChild(elementDialogEntry) // 4.
+        document.getElementById('dialog-entry-' + i).innerHTML = 'dial0g ID is ' + result.dialogs[i].id + ', date is ' + result.dialogs[i].date// 5.
+      }
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+}
 const addDialogHandlers = () => {
   $('#create-dialog').on('submit', onCreateDialog)
   $('#update-dialog').on('submit', onUpdateDialog)
   $('#delete-dialog').on('submit', onDeleteDialog)
+  $('#entries-button').on('click', onGetDialogs)
 }
 
 // NEED TO CREATE NEW FUNCTION FOR CREATING NEW AUTH HANDLERS
