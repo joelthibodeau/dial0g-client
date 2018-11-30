@@ -29,15 +29,17 @@
           <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></span>
         </div>
         <div id="signed-in">
-          <span><button class="new-game">new dial0g</button></span>
+          <span><button class="menu-buttons" data-toggle="modal" data-target="#newDialogModal">create</button></span>
           <span> | </span>
-          <!-- <span><button class="reset">reset</button></span>
-          <span> | </span> -->
-          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">account</button></span>
+          <span><button class="menu-buttons" data-toggle="modal" data-target="#updateDialogModal">update</button></span>
           <span> | </span>
           <span><button id="entries-button" type="button" class="menu-buttons" data-toggle="modal" data-target="#entriesModal">entries</button></span>
           <span> | </span>
-          <span><button type="button" class="sign-out" data-toggle="modal" data-target="#signOutModal">sign out</button></span>
+          <span><button class="menu-buttons" data-toggle="modal" data-target="#deleteDialogModal">delete</button></span>
+          <span> | </span>
+          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">account</button></span>
+          <span> | </span>
+          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signOutModal">sign out</button></span>
         </div>
       </div>
 
@@ -95,6 +97,98 @@
           </div>
         </div>
 
+      <!-- CREATE DIALOG MODAL BEGINS -->
+        <div class="modal fade" id="newDialogModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="newDialogModalLabel"></h5>
+                <button type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <form id="create-dialog">
+                    <fieldset>
+                      <legend>create</legend>
+                        <input name="dialog[date]" type="text"  placeholder="00/00/00">
+                        <input name="dialog[entry_name]" type="text"  placeholder="dial0g name">
+                        <input name="dialog[rating]" type="number"  placeholder="enter # 1-10">
+                        <input name="dialog[notes]" type="text"  placeholder="notes">
+                        <br>
+                        <input type="submit" value="submit" class="modal-buttons">
+                    </fieldset>
+                  </form>
+               </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- UPDATE DIALOG MODAL BEGINS -->
+        <div class="modal fade" id="updateDialogModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="updateDialogModalLabel"></h5>
+                <button type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <form id="update-dialog">
+                    <fieldset>
+                      <legend>update</legend>
+                        <input name="dialog[id]" type="text"  placeholder="ID #">
+                        <input name="dialog[date]" type="text"  placeholder="00/00/00">
+                        <input name="dialog[entry_name]" type="text"  placeholder="dial0g name">
+                        <input name="dialog[rating]" type="number"  placeholder="enter # 1-10">
+                        <input name="dialog[notes]" type="text"  placeholder="notes">
+                        <br>
+                        <input type="submit" value="submit" class="modal-buttons">
+                    </fieldset>
+                  </form>
+               </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- ENTRIES MODAL BEGINS -->
+        <div class="modal fade" id="entriesModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="entriesModalLabel"></h5>
+                <button type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <legend>entries</legend>
+                  <div id='dialogs-info' class='dialogs-info'></div>
+               </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      <!-- DELETE DIALOG MODAL BEGINS -->
+        <div class="modal fade" id="deleteDialogModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteDialogModalLabel"></h5>
+                <button type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <form id="delete-dialog">
+                    <fieldset>
+                      <legend>delete?</legend>
+                      <input name="dialog[id]" type="text"  placeholder="ID #">
+                      <br>
+                      <input type="submit" value="delete" class="modal-buttons">
+                    </fieldset>
+                  </form>
+               </div>
+            </div>
+          </div>
+        </div>
+
       <!-- CHANGE PASSWORD MODAL BEGINS -->
         <div class="modal fade" id="changePasswordModal">
           <div class="modal-dialog">
@@ -110,37 +204,15 @@
                       <input type="password" name="passwords[old]" placeholder="old password">
                       <input type="password" name="passwords[new]" placeholder="new password">
                       <br>
-                      <input type="submit" value="change" class="modal-change-password">
+                      <input type="submit" value="submit" class="modal-buttons">
                     </fieldset>
                   </form>
                </div>
-              <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-              </div> -->
             </div>
           </div>
         </div>
 
-        <!-- ENTRIES MODAL BEGINS -->
-          <div class="modal fade" id="entriesModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="entriesModalLabel"></h5>
-                  <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <legend>entries</legend>
-                    <div id='dialogs-info' class='dialogs-info'></div>
-                 </div>
-                <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-                </div> -->
-              </div>
-            </div>
-          </div>
-
-
+      <!-- SIGN OUT MODAL BEGINS -->
         <div class="modal fade" id="signOutModal">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -152,79 +224,27 @@
                   <form id="sign-out">
                     <fieldset>
                       <legend>definitely sign out?</legend>
-                      <input type="submit" value="sign out" class="modal-signout">
+                      <input type="submit" value="sign out" class="modal-buttons">
                     </fieldset>
                   </form>
               </div>
-              <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-              </div> -->
             </div>
           </div>
         </div>
 
-        <div class="board-container">
-      <div class="board">
-
-        <!-- <div class="row">
-          <div id="0" style="border-left: transparent; border-top: transparent;" class="cell"></div>
-          <div id="1" style="border-top: transparent;" class="cell"></div>
-          <div id="2" style="border-right: transparent; border-top: transparent;" class="cell"></div>
-        </div>
-
-        <div class="row">
-          <div id="3" style="border-left: transparent;" class="cell"></div>
-          <div id="4" class="cell"></div>
-          <div id="5" style="border-right: transparent;" class="cell"></div>
-        </div>
-
-        <div class="row">
-          <div id="6" style="border-left: transparent; border-bottom: transparent;" class="cell"></div>
-          <div id="7" style="border-bottom: none;"class="cell"></div>
-          <div id="8" style="border-right: transparent; border-bottom: transparent;" class="cell"></div>
-        </div>
-        <div  class='winner'></div>
-        <div id='message' class='message'></div> -->
-      </div>
+<div class="board-container">
+    <!-- <div class="board">
+    </div> -->
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div id='message' class='message'></div>
-    <div>
-      <form id="create-dialog">
-          <fieldset>
-            <legend style="text-align: center;">new dial0g</legend>
-              <input name="dialog[date]" type="text"  placeholder="00/00/00">
-              <input name="dialog[entry_name]" type="text"  placeholder="dial0g name">
-              <input name="dialog[rating]" type="number"  placeholder="enter # 1-10">
-              <input name="dialog[notes]" type="text"  placeholder="notes">
-              <br>
-              <input type="submit" value="submit">
-          </fieldset>
-      </form>
-    </div>
-    <div>
-      <form id="update-dialog">
-          <fieldset>
-            <legend style="text-align: center;">update dial0g</legend>
-              <input name="dialog[id]" type="text"  placeholder="ID #">
-              <input name="dialog[date]" type="text"  placeholder="00/00/00">
-              <input name="dialog[entry_name]" type="text"  placeholder="dial0g name">
-              <input name="dialog[rating]" type="number"  placeholder="enter # 1-10">
-              <input name="dialog[notes]" type="text"  placeholder="notes">
-              <br>
-              <input type="submit" value="submit">
-          </fieldset>
-      </form>
-    </div>
-    <div>
-      <form id="delete-dialog">
-          <fieldset>
-            <legend style="text-align: center;">delete dial0g</legend>
-              <input name="dialog[id]" type="text"  placeholder="ID #">
-              <br>
-              <input type="submit" value="submit">
-          </fieldset>
-      </form>
-    </div>
-        <!-- <div id='message' class='message'></div> -->
+
     </body>
 </html>

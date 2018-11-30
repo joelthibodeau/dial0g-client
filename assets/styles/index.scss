@@ -7,10 +7,16 @@ $achromatomaly: #b0a591;
 $dim-grey: #696969;
 $failure-red: #f00;
 $success-green: #008000;
+// dial0gs colors
+$dark-putty: #686256;
+$orange-red: #c1502e;
+$dim-teal: #587e76;
+$rouge: #a96e5b;
+
 
 body {
-  background-color: $white-smoke;
-  color: $dim-grey;
+  background-color: $dark-putty;
+  color: black;
   font-family: 'Questrial', sans-serif;
   margin-top: 45px;
 }
@@ -68,7 +74,7 @@ body {
   text-align: center;
 
   &.success {
-    color: $success-green;
+    color: black;
   }
 
   &.failure {
@@ -144,10 +150,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $white-smoke;
-  border: solid $white-smoke;
+  background-color: $dark-putty;
+  border: solid $dark-putty;
   border-radius: 4px;
-  color: $dim-grey;
+  color: $white-smoke;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -156,17 +162,17 @@ body {
   // padding: 20px;
 
   &:hover {
-    background-color: $white-smoke;
-    color: $dark-khaki;
+    background-color: $dark-putty;
+    color: $orange-red;
     cursor: pointer;
   }
 }
 
-.modal-signup {
-  background-color: $dark-khaki;
-  border: solid $dark-khaki;
-  border-radius: 4px;
-  color: $dim-grey;
+.modal-buttons {
+  background-color: $dim-teal;
+  border: solid $white-smoke;
+  border-radius: 8px;
+  color: $white-smoke;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -176,9 +182,32 @@ body {
   width: 75px;
 
   &:hover {
-    background-color: $dark-khaki;
-    border: solid $dark-khaki;
-    border-radius: 4px;
+    background-color: $rouge;
+    border: solid $white-smoke;
+    border-radius: 8px;
+    color: $white-smoke;
+    cursor: pointer;
+    width: 75px;
+  }
+}
+
+.modal-signup {
+  background-color: $dim-teal;
+  border: solid $white-smoke;
+  border-radius: 8px;
+  color: $white-smoke;
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  // margin: 12px;
+  outline: none !important;
+  // padding: 20px;
+  width: 75px;
+
+  &:hover {
+    background-color: $rouge;
+    border: solid $white-smoke;
+    border-radius: 8px;
     color: $white-smoke;
     cursor: pointer;
     width: 75px;
@@ -186,10 +215,10 @@ body {
 }
 
 .modal-signin {
-  background-color: $dark-khaki;
-  border: solid $dark-khaki;
-  border-radius: 4px;
-  color: $dim-grey;
+  background-color: $dim-teal;
+  border: solid $white-smoke;
+  border-radius: 8px;
+  color: $white-smoke;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -199,9 +228,9 @@ body {
   width: 75px;
 
   &:hover {
-    background-color: $dark-khaki;
-    border: solid $dark-khaki;
-    border-radius: 4px;
+    background-color: $rouge;
+    border: solid $white-smoke;
+    border-radius: 8px;
     color: $white-smoke;
     cursor: pointer;
     width: 75px;
