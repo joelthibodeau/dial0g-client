@@ -57,23 +57,19 @@ const deleteDialog = data => {
   })
 }
 
-// const deleteDialog = function (id) {
-//   return $.ajax({
-//     url: config.apiUrl + `/dialogs/${id}`,
-//     method: 'DELETE'
-//   })
-// }
-
-// const updateOneBookFromApi = function (bookObject) {
-//   return $.ajax({
-//     url: baseUrl + `/books/${bookObject.book.id}`,
-//     method: 'PATCH',
-//     data: bookObject
-//   })
-// }
+const getAllDialogs = function () {
+  // use AJAX to send request
+  const data = $.ajax({
+    url: config.apiUrl + '/dialogs',
+    method: 'GET'
+  })
+  // return the AJAX object
+  return data
+}
 
 module.exports = {
   createDialog,
   updateDialog,
-  deleteDialog
+  deleteDialog,
+  getAllDialogs
 }

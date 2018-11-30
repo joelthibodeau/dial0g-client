@@ -44,7 +44,7 @@ const deleteDialogSuccess = data => {
   $('.message').text('delete dial0g successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.error('deleteDialogSuccess ran.')
+  console.log('deleteDialogSuccess ran.')
   emptyMessage()
 }
 
