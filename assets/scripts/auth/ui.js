@@ -45,11 +45,13 @@ const signInFailure = error => {
 }
 
 const changePasswordSuccess = data => {
-  console.log(data.user.token)
+  console.log('changedPasswordSuccess ran. Data is:', data)
+  // consol.log below was causing user facing error message, despite 204
+  // console.log(data.user.token)
   $('.message').text('changed password successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('changedPasswordSuccess ran. Data is:', data)
+  // console.log('changedPasswordSuccess ran. Data is:', data)
   emptyMessage()
 }
 
