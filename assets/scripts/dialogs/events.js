@@ -37,7 +37,7 @@ const onDeleteDialog = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   // const data = $('#delete-input').val()
-  // console.log('delete scheme')
+  // console.log('delete dialog')
   console.log(data)
   // take this data and send it to our server
   // using an HTTP request (POST)
