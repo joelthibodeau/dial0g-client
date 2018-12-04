@@ -52,6 +52,10 @@ const addAuthHandlers = () => {
   $('#signed-in').hide()
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
+  $('#clearform').on('click', function () {
+    $('#sign-in').find('input:text').val('')
+    // $('input:checkbox').removeAttr('checked');
+  })
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
 //   $('#create-dialog').on('submit', onCreateDialog)

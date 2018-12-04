@@ -28,9 +28,10 @@ const signInSuccess = data => {
   console.log(data.user.token)
   store.user = data.user
   $('#signed-out').hide()
-  // $('#signed-in').show()
-  $('#email').val('')
-  $('#password').val('')
+  $('#signed-in').show()
+  $('#sign-in').find('input:text, input:password').val('')
+  // $('#email').val('')
+  // $('#password').val('')
   $('#sign-in').modal('hide')
   $('.message').text('signed in successfully')
   $('.message').attr('class', 'message')
