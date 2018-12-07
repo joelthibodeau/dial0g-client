@@ -52,6 +52,7 @@ const onGetDialogs = event => {
   // console.log('onGetStats ran.')
   api.getAllDialogs()
     .then((result) => {
+      document.getElementById('dialogs-info').innerHTML = ''
       // console.log(result)
       // code inspired by tic tac toe
       // 1. create new div
@@ -64,7 +65,7 @@ const onGetDialogs = event => {
         elementDialogEntry.setAttribute('id', 'dialog-entry-' + i) // 2.
         // elementDialogEntry.setAttribute('class', 'dialog-entry-element') // 3.
         document.getElementById('dialogs-info').appendChild(elementDialogEntry) // 4.
-        document.getElementById('dialog-entry-' + i).innerHTML = 'dial0g ID is ' + result.dialogs[i].id + ', date is ' + result.dialogs[i].date// 5.
+        document.getElementById('dialog-entry-' + i).innerHTML = 'dial0g ID: ' + result.dialogs[i].id + ' .' + '.' + '. ' + result.dialogs[i].date + ' .' + '.' + '. ' + result.dialogs[i].entry_name + ' .' + '.' + '. ' + '  rating:  ' + result.dialogs[i].rating// 5.
       }
     })
     .catch((error) => {

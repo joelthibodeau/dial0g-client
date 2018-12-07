@@ -11,6 +11,8 @@ const emptyMessage = () => {
 const createDialogSuccess = data => {
   // clears modal form fields.
   $('#create-dialog').trigger('reset')
+  // close modal on create dialog success
+  $('#newDialogModal').modal('hide')
   $('.message').text('created dial0g successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
@@ -28,6 +30,8 @@ const createDialogFailure = error => {
 
 const updateDialogSuccess = data => {
   $('#update-dialog').trigger('reset')
+  // close modal on update dialog success
+  $('#updateDialogModal').modal('hide')
   $('.message').text('updated dial0g successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
@@ -45,6 +49,8 @@ const updateDialogFailure = error => {
 
 const deleteDialogSuccess = data => {
   $('#delete-dialog').trigger('reset')
+  // close modal on delete dialog success
+  $('#deleteDialogModal').modal('hide')
   $('.message').text('delete dial0g successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')

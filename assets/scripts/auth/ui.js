@@ -11,6 +11,8 @@ const emptyMessage = () => {
 const signUpSuccess = data => {
   // clears form text and password ellipses on sign up success.
   $('#sign-up').find('input:text, input:password').val('')
+  // close modal on sign up success
+  $('#signUpModal').modal('hide')
   $('.message').text('signed up successfully')
   $('.message').attr('class', 'message') // removes all classes except the default class of 'message'
   $('.message').addClass('success')
@@ -35,7 +37,8 @@ const signInSuccess = data => {
   $('#sign-in').find('input:text, input:password').val('')
   // $('#email').val('')
   // $('#password').val('')
-  $('#sign-in').modal('hide')
+  // close modal on sign in success
+  $('#signInModal').modal('hide')
   $('.message').text('signed in successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
@@ -53,10 +56,12 @@ const signInFailure = error => {
 
 const changePasswordSuccess = data => {
   console.log('changedPasswordSuccess ran. Data is:', data)
-  // consol.log below was causing user facing error message, despite 204
+  // console.log below was causing user facing error message, despite 204
   // console.log(data.user.token)
   // clears form text and password ellipses on sign in success.
   $('#change-password').find('input:password').val('')
+  // close modal on change password success
+  $('#changePasswordModal').modal('hide')
   $('.message').text('changed password successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
@@ -76,6 +81,8 @@ const signOutSuccess = data => {
   $('#signed-in').hide()
   $('#signed-out').show()
   $('.message').text('signed out successfully')
+  // close modal on sign out success
+  $('#signOutModal').modal('hide')
   store.user = {} // or = null
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
