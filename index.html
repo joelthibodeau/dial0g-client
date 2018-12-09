@@ -31,9 +31,9 @@
         <div id="signed-in">
           <span><button class="menu-buttons" data-toggle="modal" data-target="#newDialogModal">create</button></span>
           <span> | </span>
-          <span><button class="menu-buttons" data-toggle="modal" data-target="#updateDialogModal">update</button></span>
+          <span><button class="menu-buttons" data-toggle="modal" data-target="#updateDialogModal">edit</button></span>
           <span> | </span>
-          <span><button id="entries-button" type="button" class="menu-buttons" data-toggle="modal" data-target="#entriesModal">entries</button></span>
+          <span><button id="entries-button" type="button" class="menu-buttons" data-toggle="modal" data-target="#entriesModal">dialogs</button></span>
           <span> | </span>
           <span><button class="menu-buttons" data-toggle="modal" data-target="#deleteDialogModal">delete</button></span>
           <span> | </span>
@@ -50,8 +50,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="signUpModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
                 <div class="modal-body">
                   <form id="sign-up">
                       <fieldset>
@@ -77,8 +79,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="signInModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+             </div>
                 <div class="modal-body">
                   <form id="sign-in">
                     <fieldset>
@@ -103,8 +107,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="newDialogModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
                 <div class="modal-body">
                   <form id="create-dialog">
                     <fieldset>
@@ -114,7 +120,7 @@
                         <input name="dialog[rating]" type="number"  placeholder="enter # 1-10">
                         <!-- <input name="dialog[notes]" type="text"  placeholder="notes"> -->
                         <br>
-                        <input type="submit" value="submit" class="modal-buttons">
+                        <input type="submit" value="save" class="modal-buttons">
                     </fieldset>
                   </form>
                </div>
@@ -128,8 +134,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="updateDialogModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
                 <div class="modal-body">
                   <form id="update-dialog">
                     <fieldset>
@@ -140,7 +148,7 @@
                         <input name="dialog[rating]" type="number"  placeholder="enter # 1-10">
                         <!-- <input name="dialog[notes]" type="text"  placeholder="notes"> -->
                         <br>
-                        <input type="submit" value="submit" class="modal-buttons">
+                        <input type="submit" value="save" class="modal-buttons">
                     </fieldset>
                   </form>
                </div>
@@ -154,10 +162,12 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="entriesModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
                 <div class="modal-body">
-                  <legend>entries</legend>
+                  <legend>dial0g entries</legend>
                   <div id='dialogs-info' class='dialogs-info'></div>
                </div>
               <!-- <div class="modal-footer">
@@ -173,8 +183,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="deleteDialogModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
                 <div class="modal-body">
                   <form id="delete-dialog">
                     <fieldset>
@@ -195,8 +207,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="changePasswordModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+             </div>
                 <div class="modal-body">
                   <form id="change-password">
                     <fieldset>
@@ -218,13 +232,15 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="signOutModalLabel"></h5>
-                <button type="button" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
                 <div class="modal-body">
                   <form id="sign-out">
                     <fieldset>
                       <legend>definitely sign out?</legend>
-                      <input type="submit" value="sign out" class="modal-buttons">
+                      <input type="submit" value="yes" class="modal-buttons">
                     </fieldset>
                   </form>
               </div>

@@ -66,7 +66,7 @@ const onGetDialogs = event => {
         // elementDialogEntry.setAttribute('class', 'dialog-entry-element') // 3.
         document.getElementById('dialogs-info').appendChild(elementDialogEntry) // 4.
         // removed result.dialogs[i].notes from concatenation
-        document.getElementById('dialog-entry-' + i).innerHTML = 'dial0g ID: ' + result.dialogs[i].id + ' .' + '.' + '. ' + result.dialogs[i].date + ' .' + '.' + '. ' + result.dialogs[i].entry_name + ' .' + '.' + '. ' + '  rating:  ' + result.dialogs[i].rating// 5.
+        document.getElementById('dialog-entry-' + i).innerHTML = 'dial0g ID: ' + result.dialogs[i].id + ' .' + '.' + '.' + '.' + '.' + '.' + '. ' + result.dialogs[i].date + ' .' + '.' + '.' + '.' + '. ' + result.dialogs[i].entry_name + ' .' + '.' + '.' + '.' + '. ' + '  rating:  ' + result.dialogs[i].rating// 5.
       }
     })
     .catch((error) => {
