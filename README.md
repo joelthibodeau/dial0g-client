@@ -44,4 +44,5 @@ set the rating of an entry on scale of 1 to 10. When the user retrieves entries,
 are represented by the knob setting originally saved providing easy to read visual feedback.
 Both the front end and back end took longer than expected, and I wasn't able to create
 working knob for the deadline. I plan to add this feature in the future so that the
-user experience is more meaningful.
+user experience is more meaningful. Additionally, the application has been scaffolded to
+to accept notes from the user and the form field will be added in a future iteration.
