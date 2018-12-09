@@ -284,3 +284,21 @@ body {
 .modal-backdrop {
   background-color: $white-smoke;
 }
+
+//modal close
+.modal-closeButton {
+  background-color: $tritanopia;
+  border: solid $tritanopia;
+  border-radius: 4px;
+  color: $dim-grey;
+
+
+  &:hover {
+    background-color: $tritanopia;
+    border: solid $tritanopia;
+    border-radius: 4px;
+    color: $white-smoke;
+    cursor: pointer;
+    width: 75px;
+  }
+}
