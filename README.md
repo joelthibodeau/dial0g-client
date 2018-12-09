@@ -11,9 +11,9 @@ sign in and begin creating records.
 
 ### Links ###
 
-• API Repository – https://github.com/joelthibodeau/dial0g-api
-• Client Repository – https://github.com/joelthibodeau/dial0g-client
-• Deployed front-end – https://joelthibodeau.github.io/dial0g-client/
+* API Repository – https://github.com/joelthibodeau/dial0g-api
+* Client Repository – https://github.com/joelthibodeau/dial0g-client
+* Deployed front-end – https://joelthibodeau.github.io/dial0g-client/
 
 ### Technologies ###
 
@@ -34,7 +34,7 @@ Ruby on Rails along with heroku for the back end to create this single page appl
 
 ### Wireframe ###
 
-![dial0g wireframe](https://imgur.com/5vi53YQ)
+![dial0g wireframe](https://imgur.com/5vi53YQ?raw=true)
 
 ### Planning & Future Iterations ###
 
