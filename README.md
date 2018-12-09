@@ -1,6 +1,6 @@
 # dial0g #
 
-## Full-Stack Project – front end ##
+## Full-Stack Project • front-end ##
 
 ### Description ###
 
@@ -13,13 +13,14 @@ sign in and begin creating records.
 
 * API Repository – https://github.com/joelthibodeau/dial0g-api
 * Client Repository – https://github.com/joelthibodeau/dial0g-client
+* Deployed back-end – https://dial0g-api.herokuapp.com/
 * Deployed front-end – https://joelthibodeau.github.io/dial0g-client/
 
 ### Technologies ###
 
 dialog is my second project in General Assembly's Web Development Immersive program.
-I used JavaScript, CSS/Sass, HTML5, jQuery and Bootstrap to build the front end, and
-Ruby on Rails along with heroku for the back end to create this single page application.
+I used JavaScript, CSS/Sass, HTML5, jQuery and Bootstrap to build the front-end, and
+Ruby on Rails along with heroku for the back-end to create this single page application.
 
 ### User Stories ###
 
@@ -42,7 +43,7 @@ The current version of dial0g is a work in progress. The original plan was to in
 and dial/knob using jQuery that the user could operate with a mouse or trackpad to
 set the rating of an entry on scale of 1 to 10. When the user retrieves entries, ratings
 are represented by the knob setting originally saved providing easy to read visual feedback.
-Both the front end and back end took longer than expected, and I wasn't able to create
+Both the front-end and back-end took longer than expected and I wasn't able to create
 working knob for the deadline. I plan to add this feature in the future so that the
-user experience is more meaningful. Additionally, the application has been scaffolded to
-to accept notes from the user and the form field will be added in a future iteration.
+user's experience is more meaningful. Additionally, the application has been scaffolded to
+accept notes from the user and the form field will be added in a future iteration.
