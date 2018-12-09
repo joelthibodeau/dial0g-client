@@ -34,7 +34,7 @@ Ruby on Rails along with heroku for the back end to create this single page appl
 
 ### Wireframe ###
 
-![dial0g wireframe](https://imgur.com/5vi53YQ?raw=true)
+![dial0g wireframe](https://i.imgur.com/5vi53YQ.jpg)
 
 ### Planning & Future Iterations ###
 
