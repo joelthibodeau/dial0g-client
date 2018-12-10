@@ -16,15 +16,16 @@ const createDialogSuccess = data => {
   $('.message').text('created dial0g successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('createDialogSuccess ran. Data is:', data)
+  // console.log('createDialogSuccess ran. Data is:', data)
   emptyMessage()
 }
 
-const createDialogFailure = error => {
+// change 'error =>' to '() =>' to prevent linter error
+const createDialogFailure = () => {
   $('.message').text('error on create dial0g')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
-  console.error('createDialogFailure ran. Error is :', error)
+  // console.error('createDialogFailure ran. Error is :', error)
   emptyMessage()
 }
 
@@ -35,15 +36,16 @@ const updateDialogSuccess = data => {
   $('.message').text('updated dial0g successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('updateDialogSuccess ran. Data is:', data)
+  // console.log('updateDialogSuccess ran. Data is:', data)
   emptyMessage()
 }
 
-const updateDialogFailure = error => {
+// change 'error =>' to '() =>' to prevent linter error
+const updateDialogFailure = () => {
   $('.message').text('error on update dial0g')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
-  console.error('updateDialogFailure ran. Error is :', error)
+  // console.error('updateDialogFailure ran. Error is :', error)
   emptyMessage()
 }
 
@@ -54,15 +56,16 @@ const deleteDialogSuccess = data => {
   $('.message').text('delete dial0g successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('deleteDialogSuccess ran.')
+  // console.log('deleteDialogSuccess ran.')
   emptyMessage()
 }
 
-const deleteDialogFailure = error => {
+// change 'error =>' to '() =>' to prevent linter error
+const deleteDialogFailure = () => {
   $('.message').text('error on delete dial0g')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
-  console.error('deleteDialogFailure ran. Error is :', error)
+  // console.error('deleteDialogFailure ran. Error is :', error)
   emptyMessage()
 }
 
