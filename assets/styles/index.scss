@@ -20,12 +20,6 @@ body {
   margin-top: 45px;
 }
 
-.board {
-  height: 300px;
-  margin: 0 auto;
-  width: 300px;
-}
-
 .row {
   display: flex;
 }
@@ -285,20 +279,24 @@ body {
   background-color: $white-smoke;
 }
 
-//modal close
-.modal-closeButton {
-  background-color: $tritanopia;
-  border: solid $tritanopia;
-  border-radius: 4px;
-  color: $dim-grey;
-
-
-  &:hover {
-    background-color: $tritanopia;
-    border: solid $tritanopia;
-    border-radius: 4px;
-    color: $white-smoke;
-    cursor: pointer;
-    width: 75px;
-  }
+.dial {
+  display: block;
+  margin: 0 auto;
 }
+
+//modal close
+// .modal-closeButton {
+//   background-color: $tritanopia;
+//   border: solid $tritanopia;
+//   border-radius: 4px;
+//   color: $dim-grey;
+//
+//   &:hover {
+//     background-color: $tritanopia;
+//     border: solid $tritanopia;
+//     border-radius: 4px;
+//     color: $white-smoke;
+//     cursor: pointer;
+//     width: 75px;
+//   }
+// }
