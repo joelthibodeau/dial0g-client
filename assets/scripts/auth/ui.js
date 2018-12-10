@@ -30,7 +30,7 @@ const signUpFailure = () => {
 }
 
 const signInSuccess = data => {
-  console.log(data.user.token)
+  // console.log(data.user.token)
   store.user = data.user
   $('#signed-out').hide()
   $('#signed-in').show()
