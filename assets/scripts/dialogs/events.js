@@ -9,23 +9,23 @@ const ui = require('./ui.js')
 const onCreateDialog = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('onCreateDialog ran.')
+  // console.log('onCreateDialog ran.')
   api.createDialog(data)
     .then(ui.createDialogSuccess)
     .catch(ui.createDialogFailure)
 }
 
 const onUpdateDialog = event => {
-  console.log('got into update-dialog...about to prevent default')
+  // console.log('got into update-dialog...about to prevent default')
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
-  console.log('onUpdateDialog ran.')
-  console.log('my dialog id is ', data.dialog.id)
-  console.log('my dialog id title ', data.dialog.date)
-  console.log('my dialog id entry_name ', data.dialog.entry_name)
-  console.log('my dialog id rating ', data.dialog.rating)
-  console.log('my dialog id notes ', data.dialog.notes)
+  // console.log(data)
+  // console.log('onUpdateDialog ran.')
+  // console.log('my dialog id is ', data.dialog.id)
+  // console.log('my dialog id title ', data.dialog.date)
+  // console.log('my dialog id entry_name ', data.dialog.entry_name)
+  // console.log('my dialog id rating ', data.dialog.rating)
+  // console.log('my dialog id notes ', data.dialog.notes)
   api.updateDialog(data)
     .then(function (response) {
       ui.updateDialogSuccess(response)
@@ -38,10 +38,10 @@ const onDeleteDialog = event => {
   const data = getFormFields(event.target)
   // const data = $('#delete-input').val()
   // console.log('delete dialog')
-  console.log(data)
+  // console.log(data)
   // take this data and send it to our server
   // using an HTTP request (POST)
-  console.log('onDeleteDialog ran.')
+  // console.log('onDeleteDialog ran.')
   api.deleteDialog(data)
     .then(ui.deleteDialogSuccess) // if your request was succesful
     .catch(ui.deleteDialogFailure) // if your request failed
@@ -69,8 +69,9 @@ const onGetDialogs = event => {
         document.getElementById('dialog-entry-' + i).innerHTML = 'dial0g ID: ' + result.dialogs[i].id + ' .' + '.' + '.' + '.' + '.' + '.' + '. ' + result.dialogs[i].date + ' .' + '.' + '.' + '.' + '. ' + result.dialogs[i].entry_name + ' .' + '.' + '.' + '.' + '. ' + '  rating:  ' + result.dialogs[i].rating// 5.
       }
     })
-    .catch((error) => {
-      console.log(error)
+    // change 'error =>' to '() =>' to prevent linter error
+    .catch(() => {
+      // console.log(error)
     })
 }
 const addDialogHandlers = () => {
