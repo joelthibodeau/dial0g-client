@@ -40,7 +40,7 @@ Ruby on Rails along with heroku for the back-end to create this single page appl
 ### Planning & Future Iterations ###
 
 The current version of dial0g is a work in progress. The original plan was to incorporate
-and dial/knob using jQuery that the user could operate with a mouse or trackpad to
+a dial/knob using jQuery that the user could operate with a mouse or trackpad to
 set the rating of an entry on scale of 1 to 10. When the user retrieves entries, ratings
 are represented by the knob setting originally saved providing easy to read visual feedback.
 Both the front-end and back-end took longer than expected and I wasn't able to create a
