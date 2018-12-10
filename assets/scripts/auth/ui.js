@@ -16,15 +16,16 @@ const signUpSuccess = data => {
   $('.message').text('signed up successfully')
   $('.message').attr('class', 'message') // removes all classes except the default class of 'message'
   $('.message').addClass('success')
-  console.log('signUpSucces ran. Data is:', data)
+  // console.log('signUpSucces ran. Data is:', data)
   emptyMessage()
 }
 
-const signUpFailure = error => {
+// change 'error =>' to '() =>' to prevent linter error
+const signUpFailure = () => {
   $('.message').text('error on sign up')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
-  console.error('signUpFailure ran. Error is :', error)
+  // console.error('signUpFailure ran. Error is :', error)
   emptyMessage()
 }
 
@@ -42,20 +43,21 @@ const signInSuccess = data => {
   $('.message').text('signed in successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('signInSuccess ran. Data is:', data)
+  // console.log('signInSuccess ran. Data is:', data)
   emptyMessage()
 }
 
-const signInFailure = error => {
+// change 'error =>' to '() =>' to prevent linter error
+const signInFailure = () => {
   $('.message').text('error on sign in')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
-  console.error('signInFailure ran. Error is :', error)
+  // console.error('signInFailure ran. Error is :', error)
   emptyMessage()
 }
 
 const changePasswordSuccess = data => {
-  console.log('changedPasswordSuccess ran. Data is:', data)
+  // console.log('changedPasswordSuccess ran. Data is:', data)
   // console.log below was causing user facing error message, despite 204
   // console.log(data.user.token)
   // clears form text and password ellipses on sign in success.
@@ -69,11 +71,12 @@ const changePasswordSuccess = data => {
   emptyMessage()
 }
 
-const changePasswordFailure = error => {
+// change 'error =>' to '() =>' to prevent linter error
+const changePasswordFailure = () => {
   $('.message').text('error changing password')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
-  console.error('changedPasswordFailure ran. Error is :', error)
+  // console.error('changedPasswordFailure ran. Error is :', error)
   emptyMessage()
 }
 
@@ -86,34 +89,18 @@ const signOutSuccess = data => {
   store.user = {} // or = null
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('signOutSuccess ran. Data is:', data)
+  // console.log('signOutSuccess ran. Data is:', data)
   emptyMessage()
 }
 
-const signOutFailure = error => {
+// change 'error =>' to '() =>' to prevent linter error
+const signOutFailure = () => {
   $('.message').text('error on sign out')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
-  console.error('signOutFailure ran. Error is :', error)
+  // console.error('signOutFailure ran. Error is :', error)
   emptyMessage()
 }
-//
-// const createDialogSuccess = data => {
-//   $('.message').text('created dial0g successfully')
-//   store.user = {} // or = null
-//   $('.message').attr('class', 'message')
-//   $('.message').addClass('success')
-//   console.log('createDialogSuccess ran. Data is:', data)
-//   emptyMessage()
-// }
-//
-// const createDialogFailure = error => {
-//   $('.message').text('error on create dial0g')
-//   $('.message').attr('class', 'message')
-//   $('.message').addClass('failure')
-//   console.error('createDialogFailure ran. Error is :', error)
-//   emptyMessage()
-// }
 
 module.exports = {
   signUpSuccess,
