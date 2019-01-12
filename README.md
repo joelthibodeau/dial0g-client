@@ -18,7 +18,7 @@ sign in and begin creating records.
 
 ### Technologies ###
 
-dialog is my second project in General Assembly's Web Development Immersive program.
+dial0g is my second project in General Assembly's Web Development Immersive program.
 I used JavaScript, CSS/Sass, HTML5, jQuery and Bootstrap to build the front-end, and
 Ruby on Rails along with heroku for the back-end to create this single page application.
 
